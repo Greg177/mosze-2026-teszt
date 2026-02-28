@@ -4,21 +4,21 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[N_ELEMENTS]; // HIBA: NELEMENTS helyett N_ELEMENTS kell
-    std::cout << "1-100 ertekek duplazasa"; // HIBA: sima ' helyett " kell, illetve nincs lezárva a vége ;-jellel
-    for (int i = 0; i < N_ELEMENTS; i++) // HIBA: hiányzó feltétel és léptető
+    int* b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa" << std::endl;
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i < N_ELEMENTS; i++) // HIBA: feltétel mindig false, soha nem fut le
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek: " << b[i] << std::endl; // HIBA: hiányzó << b[i] és ;
-    }    
-    std::cout << "Atlag szamitasa: " << std::endl; 
-    int atlag = 0; // HIBA: nincs inicializálva, legyen = 0
-    for (int i = 0; i < N_ELEMENTS; i++) // HIBA: vessző helyett ;
+        std::cout << "Ertek: " << b[i] << std::endl;
+    }
+    std::cout << "Atlag szamitasa: " << std::endl;
+    int atlag = 0;
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        atlag += b[i]; // HIBA: hiányzó ;
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
